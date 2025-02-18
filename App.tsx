@@ -1,118 +1,107 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
   Text,
-  useColorScheme,
   View,
+  StyleSheet,
+  Image,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
 } from 'react-native';
+import React from 'react';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+const App = () => {
+  return [
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={styles.container}>
+        <Text style={styles.title}>Basic React Native</Text>
+      </View>
+      <TextInput
+        style={styles.input}
+        placeholder="Masukkan nama"
+        secureTextEntry={false}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+      <TextInput
+        style={styles.input}
+        placeholder="Masukkan password"
+        secureTextEntry={true}
+      />
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Submit</Text>
+      </TouchableOpacity>
+      <Text style={styles.subTitle}>Image from URI</Text>
+      <Image
+        style={styles.img1}
+        source={{
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKOOpLy92UjzQxq8NCxgxOQJbj_YVdfHO_g&s',
+        }}
+      />
+      <Text style={styles.subTitle}>Image from Directory</Text>
+      <Image style={styles.img2} source={require('./Logo/tiny_logo.png')} />
+    </ScrollView>,
+  ];
+};
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'red',
+    borderWidth: 10,
+    borderColor: 'black',
+    padding: 30,
+    margin: 20,
+    borderRadius: 50,
+  },
+  title: {
+    fontSize: 40,
+    fontWeight: '900',
+    color: 'yellow',
+    textAlign: 'center',
+    margin: 20,
+    lineHeight: 55,
+  },
+  subTitle: {
+    fontSize: 25,
+    fontWeight: '500',
+    marginLeft: 20,
+    marginBottom: 20,
+  },
+  img1: {
+    height: 200,
+    width: 200,
+    margin: 20,
+    borderRadius: 25,
+  },
+  img2: {
+    margin: 20,
+    height: 200,
+    width: 200,
+  },
+  img3: {
+    margin: 20,
+    height: 100,
+    width: 350,
+    objectFit: 'contain',
+  },
+  input: {
+    borderColor: 'black',
+    borderWidth: 3,
+    marginHorizontal: 20,
+    fontSize: 30,
+    borderRadius: 10,
+    padding: 15,
+    margin: 15,
+  },
+  button: {
+    backgroundColor: 'blue',
+    color: 'white',
+    margin: 20,
+    padding: 30,
+    borderRadius: 15,
+  },
+  buttonText: {
+    fontSize: 25,
+    textAlign: 'center',
+    color: 'white',
+  },
+});
