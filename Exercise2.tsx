@@ -29,7 +29,7 @@ const Exercise2 = () => {
         <Text style={styles.heading4}>My name is...</Text>
         <Text style={styles.heading2}>Bertrand Oscar</Text>
         <View style={styles.wrapper}>
-          <View style={styles.line}></View>
+          <View style={styles.line} />
         </View>
         <Text style={styles.heading3}>About Me:</Text>
         <Text style={styles.p}>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: 'purple',
     color: 'white',
     margin: 10,
     padding: 25,
@@ -181,6 +181,7 @@ const styles = StyleSheet.create({
     height: 400,
     position: 'absolute',
     top: 0,
+    zIndex: -1,
     zIndex: -1,
   },
   subTitle: {
@@ -271,4 +272,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Exercise2;
+// export default Exercise2;
