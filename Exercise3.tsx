@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Exercise3;
+// export default Exercise3;
