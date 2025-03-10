@@ -8,10 +8,12 @@ import {AppRegistry} from 'react-native';
 // import {name as appName} from './app.json';
 // import Exercise4 from './Exercise4';
 // import {name as appName} from './app.json';
-import SignIn from './signIn';
+// import SignIn from './signIn';
+// import {name as appName} from './app.json';
+import SignInSir from './SignInSir';
 import {name as appName} from './app.json';
 
 // AppRegistry.registerComponent(appName, () => App);
 // AppRegistry.registerComponent(appName, () => Exercise2);
 // AppRegistry.registerComponent(appName, () => Exercise3);
-AppRegistry.registerComponent(appName, () => SignIn);
+AppRegistry.registerComponent(appName, () => SignInSir);

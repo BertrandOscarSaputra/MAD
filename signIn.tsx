@@ -18,7 +18,7 @@ const SignIn = () => {
         label="Masukkan Password"
         placeholder="Masukkan password"
       />
-      <Button label="Sign In" color="orange" />
+      <Button label="Sign In" color="orange" imageSource={''} />
       <Button
         label="Sign In with Google"
         color="red"

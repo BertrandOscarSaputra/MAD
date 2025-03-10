@@ -8,6 +8,10 @@ import {
 } from 'react-native';
 
 const Exercise3 = () => {
+  const onSubmit = () => {
+    console.log('Sign In');
+  };
+
   return [
     <View style={styles.main}>
       <Text style={styles.heading}>Welcome</Text>
@@ -21,7 +25,7 @@ const Exercise3 = () => {
         secureTextEntry={true}
       />
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={onSubmit()}>
         <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>
     </View>,
@@ -68,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// export default Exercise3;
+export default Exercise3;
