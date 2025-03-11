@@ -4,7 +4,7 @@ import React from 'react';
 const Title = ({label}) => {
   return (
     <View>
-      <Text style={styles.heading}>{label}</Text>
+      <Text style={styles.header}>{label}</Text>
     </View>
   );
 };
@@ -12,9 +12,11 @@ const Title = ({label}) => {
 export default Title;
 
 const styles = StyleSheet.create({
-  heading: {
-    fontSize: 50,
+  header: {
+    fontSize: 45,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 40,
+    marginTop: 10,
+    color: 'black',
   },
 });

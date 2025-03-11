@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
-import Input from './components/InputSir';
-import Button from './components/ButtonSir';
+import Input from './components/Input6';
+import Button from './components/Button6';
 
 const SignInSir = () => {
   // let title = 'Welcome!!!'; //Variabel biasa

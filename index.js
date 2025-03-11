@@ -10,10 +10,10 @@ import {AppRegistry} from 'react-native';
 // import {name as appName} from './app.json';
 // import SignIn from './signIn';
 // import {name as appName} from './app.json';
-import SignInSir from './SignInSir';
+import Exercise6 from './Exercise6';
 import {name as appName} from './app.json';
 
 // AppRegistry.registerComponent(appName, () => App);
 // AppRegistry.registerComponent(appName, () => Exercise2);
 // AppRegistry.registerComponent(appName, () => Exercise3);
-AppRegistry.registerComponent(appName, () => SignInSir);
+AppRegistry.registerComponent(appName, () => Exercise6);
