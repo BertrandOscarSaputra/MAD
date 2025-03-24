@@ -49,7 +49,7 @@ const Exercise6 = () => {
         placeholder="Masukkan nomor telepon anda"
         onChangeText={e => setPhone(e)}
         secureTextEntry={false}
-        keyboardType="numeric"
+        keyboardType="phone-pad"
       />
       <Button label="Register" onPress={onSubmit} color="#c238ce" />
     </View>
